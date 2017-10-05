@@ -14,7 +14,7 @@ args = parser.parse_args()
 
 algorithm_CNVs, header_line = CNVworkflowlib.read_common_format(args.algorithm_CNV_filename)
 
-benchmark_CNVs = CNVworkflowlib.read_benchmark(args.benchmark_CNV_filename)
+benchmark_CNVs, _ = CNVworkflowlib.read_benchmark(args.benchmark_CNV_filename)
 
 print("{}\t{}\t{}".format(header_line, "List of overlap lengths", "List of overlapping benchmark CNVs"))
 
