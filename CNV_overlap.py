@@ -3,6 +3,10 @@
 import CNVworkflowlib
 import argparse
 
+# This script takes as input two or more files containing CNVs, and it outputs groups of CNVs with 50% reciprocal overlap
+# The "CNV_filenames" should be filenames in the common format (as output by convert_CNV_calls_to_common_format.py),
+# and the "benchmark_filenames" should be benchmark file(s)
+
 ####################################
 ### Parse command-line arguments ###
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
