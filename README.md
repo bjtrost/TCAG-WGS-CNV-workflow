@@ -14,7 +14,7 @@ For instructions on each script, as well as example usage, please refer to the c
 of each one. If you have any difficulties setting up and running these scripts, or if you encounter any bugs,
 please e-mail brett.trost@sickkids.ca.
 
-# Main scripts (designed to be called directly)
+## Main scripts (designed to be called directly)
 * IQR_samtools_depth.sh: Calculates IQR from a BAM file
 * convert_CNV_calls_to_common_format.py: Convert CNV calls to common format
 * merge_Genome_STRiP.py: Use this script on a Genome STRiP file that has already been converted to the common format using convert_CNV_calls_to_common_format.py in order to merge overlapping calls.
