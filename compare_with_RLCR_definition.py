@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # Compare a list of CNV calls to a list of repetitive and low-complexity regions (RLCRs)
 # Determine how many bases of each CNV overlap with these unclean regions, what percentage overlap,
