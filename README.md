@@ -1,5 +1,6 @@
 # TCAG-WGS-CNV-workflow
 Scripts involved in our workflow for detecting CNVs from WGS data using read depth-based methods
+Paper currently under review in American Journal of Human Genetics
 
 This README file lists, and explains the purpose of, each script.
 The scripts are divided into three categories:
@@ -17,8 +18,9 @@ of each one.
 ## Main scripts (designed to be called directly)
 
 * benchmark_overlap_counts.py: Output counts summarizing how CNVs in different categories overlap with the benchmark
-* compare_CNVs_to_benchmark.py: Compare CNVs output from the CNV-detection algorithms to a CNV benchmark
 * CNV_overlap.py: Finding overlapping CNV calls from either the CNV-detection algorithms, or different benchmark methods, or both
+* CNV_read_depth_checker.sh: Calculate the ratio between the read depth of a CNV and the read depth of the same-size surrounding regions
+* compare_CNVs_to_benchmark.py: Compare CNVs output from the CNV-detection algorithms to a CNV benchmark
 * compare_with_RLCR_definition.py: Compare CNV calls that have been converted to the common format with the RLCR definition. Requires the "intervaltree" Python module to be installed.
 * convert_CNV_calls_to_common_format.py: Convert CNV calls to common format
 * IQR_samtools_depth.sh: Calculates IQR from a BAM file
@@ -33,6 +35,8 @@ of each one.
 * CNVworkflowlib.py: Custom library of python functions used by other python scripts.
 * ERDS.py: Custom library for converting ERDS output to common format
 * Genome_STRiP.py: Custom library for converting Genome_STRiP output to common format
+* get_normalized_depth.py: Used by CNV_read_depth_checker.sh to actually calculate the normalized depth of a CNV
+* index_samtools_depth.py: Used by CNV_read_depth_checker.sh to index a "samtools depth" file for fast use of get_normalized_depth.py
 * IQR_samtools_depth.py: Does most of the work involved in calculating IQR from a BAM file
 * myvcf.py: Custom library of python functions for dealing with VCF files
 * RDXplorer.py: Custom library for converting RDXplorer output to common format
