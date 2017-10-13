@@ -1,6 +1,6 @@
 # TCAG-WGS-CNV-workflow
 Scripts involved in our workflow for detecting CNVs from WGS data using read depth-based methods
-Paper currently under review in American Journal of Human Genetics
+paper currently under review in American Journal of Human Genetics
 
 This README file lists, and explains the purpose of, each script.
 The scripts are divided into three categories:
@@ -50,4 +50,4 @@ of each one.
 * SV.py: Custom library of python functions for representing SVs/CNVs.
 
 ## Commands (designed for the user to execute commands one-by-one)
-* commands.sh: a list of commands for running BWA, GATK, etc.
+* commands.sh: a list of commands for running BWA and the CNV-detection algorithms
