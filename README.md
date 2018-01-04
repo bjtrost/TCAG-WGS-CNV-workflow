@@ -1,6 +1,9 @@
 # TCAG-WGS-CNV-workflow
-Scripts involved in our workflow for detecting CNVs from WGS data using read depth-based methods
-paper currently under review in American Journal of Human Genetics
+This repository contains scripts involved in our workflow for detecting CNVs from WGS data using read depth-based methods.
+
+If you use any of these scripts, please cite:
+
+B. Trost, S. Walker, Z. Wang, B. Thiruvahindrapuram, J.R. MacDonald, W.W.L. Sung, S.L. Pereira, J. Whitney, A.J.S. Chan, G. Pellecchia, M.S. Reuter, S. Lok, R.K.C. Yuen, C.R. Marshall, D. Merico, and S.W. Scherer. A comprehensive workflow for read depth-based identification of copy number variation from whole-genome sequence data. American Journal of Human Genetics 102(1):142-155, 2018.
 
 This README file lists, and explains the purpose of, each script.
 The scripts are divided into three categories:
