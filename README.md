@@ -52,5 +52,8 @@ of each one.
 * RDXplorer.py: Custom library for converting RDXplorer output to common format.
 * SV.py: Custom library of python functions for representing SVs/CNVs.
 
+## Data files (used by scripts)
+* hg19_gap.bed: Used by process_cnvs.erds+.sh
+
 ## Commands (designed for the user to execute commands one-by-one)
 * commands.sh: a list of commands for running BWA and the CNV-detection algorithms
