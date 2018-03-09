@@ -3,7 +3,7 @@
 # To calculate IQR based only on chromosome 1, use the following command:
 # IQR_samtools_depth.sh mysample.bam 1
 
-# To calculate IQR based only the entire genome, use the following command:
+# To calculate IQR based on the entire genome, use the following command:
 # IQR_samtools_depth.sh mysample.bam
 
 BAM_FILE=$1

@@ -23,7 +23,7 @@ def find_cumulative_val(v, total, percent):
     return(quartile_num)
 
 
-samtools_depth_file = BTlib.file_or_stdin(args.samtools_depth_filename)
+samtools_depth_file = CNVworkflowlib.file_or_stdin(args.samtools_depth_filename)
 
 depth_count = {}
 total = 0

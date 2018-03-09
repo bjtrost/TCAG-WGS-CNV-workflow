@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import BTlib
+import CNVworkflowlib
 import argparse
 
 ####################################
@@ -10,7 +10,7 @@ parser.add_argument("CNV_file", type=str, help="CNV file", default=None)
 args = parser.parse_args()
 #####################################
 
-f = BTlib.file_or_stdin(args.CNV_file)
+f = CNVworkflowlib.file_or_stdin(args.CNV_file)
 
 size_bins = ["Total", "[1000,5000)", "[5000,10000)", "[10000,100000)", "[100000,1000000)", "[1000000,...)"]
 
@@ -100,7 +100,7 @@ for line in f:
         print(fields[8] + "\t" + str(num_confirming))
 
     repeat = fields[-1]
-    size_bin = BTlib.get_size_bin(size)
+    size_bin = CNVworkflowlib.get_size_bin(size)
 
     if num_confirming > 0:
 
