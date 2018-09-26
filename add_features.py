@@ -34,7 +34,7 @@ def read_input_map(input_file,i_map,sample_id):
 		line = line.replace("\n","")
 		words = line.split("\t")
 		sample = sample_id
-		chrm = words[1].replace("chr","")
+		chrm = words[1]
 		start=words[2].replace(",","").replace("\"","")
 		end=words[3].replace(",","").replace("\"","")
 		id = chrm+":"+start+"-"+end
@@ -158,7 +158,7 @@ def read_input_ref(file_to_read, ref_coords, ref_coords_by_chrm, sample_id):
 		line = line.replace("\n","")
 		words = line.split("\t")
 		sample = sample_id
-		chrm = words[1].replace("chr","")
+		chrm = words[1]
 		id = chrm + ":" + words[2] + "-" + words[3]
 		info = words[4]+"|"+words[6].replace("|","*")
 		if ref_coords_by_chrm.has_key(sample):
@@ -279,7 +279,7 @@ if __name__ == "__main__":
 		sample = sample_id
 		start = int(words[2].replace(",","").replace("\"",""))
 		end = int(words[3].replace(",","").replace("\"",""))
-		id = words[1].replace("chr","")+":"+`start`+"-"+`end`
+		id = words[1]+":"+`start`+"-"+`end`
 		type = words[4]
 		temp_str = line
 		length = end - start 
