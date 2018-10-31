@@ -173,7 +173,7 @@ gaps = {}
 for line in gap_pos:
 	line = line.replace("\n","")
 	words = line.split("\t")
-	chrm = words[0]
+	chrm = words[0].replace("chr","")
 	if gaps.has_key(chrm):
 	  gaps[chrm].append([int(words[1]),int(words[2]),words[3]])
 	else:
@@ -221,7 +221,7 @@ for sample in samples:
         #sample CHROM   START   END     SVTYPE  SIZE    FILTER  SAMPLE|REFCN    SAMPLE|CN       IMPRECISE       SVLEN   ALT
         #format check
         try:
-          chrm = words[1]
+          chrm = words[1].replace("chr","")
           start = int(words[2])
           end = int(words[3])
           cnv = words[4]
@@ -370,7 +370,7 @@ for sample in samples:
         print >> o_file, "\t".join(header)+"\tNum_CNVs\tLength_CNVs\tLength_Gaps\tPercent_Gap"
       continue
     else:
-      chrm = words[1]
+      chrm = words[1].replace("chr","")
       start = int(words[2])
       end = int(words[3])
       cnv = words[4]

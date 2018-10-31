@@ -34,7 +34,7 @@ def read_input_map(input_file,i_map,sample_id):
 		line = line.replace("\n","")
 		words = line.split("\t")
 		sample = sample_id
-		chrm = words[1]
+		chrm = words[1].replace("chr","")
 		start=words[2].replace(",","").replace("\"","")
 		end=words[3].replace(",","").replace("\"","")
 		id = chrm+":"+start+"-"+end
@@ -78,17 +78,17 @@ def find_overlap(map_coords, file_to_read, results, overlap_cutoff, sample_id, o
 			
 			if not ref_coords_by_chrm.has_key(alt_sample_id):
 				if results.has_key(sample):
-					results[sample][id] = [0,"*","*"]
+					results[sample][id] = [0,"*","*","*","*"]
 				else:
-					results[sample]={id:[0,"**","**"]}
+					results[sample]={id:[0,"**","**","**","**"]}
 				continue
 				
 			#check if the reference sample has calls for a chrm	
 			if not ref_coords_by_chrm[alt_sample_id].has_key(chrm):
 				if results.has_key(sample):
-					results[sample][id] = [0,"#","#"]
+					results[sample][id] = [0,"#","#","#","#"]
 				else:
-					results[sample]={id:[0,"##","##"]}
+					results[sample]={id:[0,"##","##","##","##"]}
 				continue
 				
 			#check overlaps
@@ -110,7 +110,7 @@ def find_overlap(map_coords, file_to_read, results, overlap_cutoff, sample_id, o
 				if results.has_key(sample):
 					results[sample][id] = [0,"-","-","-","-","-"]
 				else:
-					results[sample]={id:[0,"-","-","-","-","-"]}
+					results[sample]={id:[0,"-","-","-","-"]}
 
 			else:
 				cnv_str = cnv_str[:-1]	
@@ -158,7 +158,7 @@ def read_input_ref(file_to_read, ref_coords, ref_coords_by_chrm, sample_id):
 		line = line.replace("\n","")
 		words = line.split("\t")
 		sample = sample_id
-		chrm = words[1]
+		chrm = words[1].replace("chr","")
 		id = chrm + ":" + words[2] + "-" + words[3]
 		info = words[4]+"|"+words[6].replace("|","*")
 		if ref_coords_by_chrm.has_key(sample):
@@ -245,7 +245,7 @@ if __name__ == "__main__":
 		
 	#else open file to write to	
 	out = open(output_file_name,'w')
-	
+	print output_file_name	
 	#datasets
 	calls = {}	
 		
@@ -279,7 +279,7 @@ if __name__ == "__main__":
 		sample = sample_id
 		start = int(words[2].replace(",","").replace("\"",""))
 		end = int(words[3].replace(",","").replace("\"",""))
-		id = words[1]+":"+`start`+"-"+`end`
+		id = words[1].replace("chr","")+":"+`start`+"-"+`end`
 		type = words[4]
 		temp_str = line
 		length = end - start 
