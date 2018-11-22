@@ -392,7 +392,7 @@ for sample in samples:
       for call in o.get_calls():
         found.append(call.get_id())
       
-      f_line = sample_name + "\t" + o.get_chrm() + "\t" + `o.get_start()` + "\t" +`o.get_end()` + "\t" + o.get_cnv() + "\t" + `o.get_size()` +"\t-\t-\t" +o.get_cn_tag() + "\t-\t-\t-\t" + `o.get_num_var()` + "\t" + `o.get_len_var()` + "\t" + `o.get_len_gap()` + "\t"+`(o.get_len_gap()/(o.get_size()*1.0))*100`
+      f_line = sample_name + "\t" + o.get_chrm() + "\t" + `o.get_start()` + "\t" +`o.get_end()` + "\t" + o.get_cnv() + "\t" + `o.get_size()` +"\tPASS\t-\t" +o.get_cn_tag() + "\t-\t-\t-\t" + `o.get_num_var()` + "\t" + `o.get_len_var()` + "\t" + `o.get_len_gap()` + "\t"+`(o.get_len_gap()/(o.get_size()*1.0))*100`
       print >> o_file, f_line
                 
     s_file.close()
