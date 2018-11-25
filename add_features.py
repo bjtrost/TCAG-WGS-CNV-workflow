@@ -64,7 +64,7 @@ def find_overlap(map_coords, file_to_read, results, overlap_cutoff, sample_id, o
 
 		for key_map in map_coords[sample]:
 			temp_key = map_coords[sample][key_map]
-			chrm = temp_key[0]
+			chrm = temp_key[0].replace("chr","")
 			s_1 = temp_key[1]
 			e_1 = temp_key[2]
 			cnv_len = e_1 - s_1 + 1
@@ -263,7 +263,8 @@ if __name__ == "__main__":
 	##SampleID	Chr	Start	End	.....
 	for line in i_file:
 		line = line.replace("\n","")
-		line = re.sub("$\t","",line)		
+		line = re.sub("$\t","",line)
+		line = re.sub("chr","",line)
 		words = line.split("\t")
 		if flag == 1:
 			flag = 0

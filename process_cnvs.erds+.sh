@@ -13,9 +13,9 @@
 
 
 cnv_dir=$1
-python_path=/usr/bin/python # Replace with actual path to Python 2
+python_path=/Users/btrost/scripts/python2 # Replace with actual path to Python 2
 ########
-root=/hpf/largeprojects/tcagstor/users/btrost/testing/stitching_scripts_test_new/
+root=/Users/btrost/Desktop/test/TCAG-WGS-CNV-workflow/
 #######
 cnvn_format="$root"format_cnvnator_results.py
 erds_format="$root"format_erds_results.py
