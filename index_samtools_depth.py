@@ -40,7 +40,7 @@ def variable_update(line):
 
 with DOCfile as df:
 	line = df.readline()
-	chr = line.split("\t")[0]
+	chr = line.split("\t")[0].replace("chr", "").upper()
 	pos = int(line.split("\t")[1])
 	loc = chr + ":" + str(pos)
 	chr_sum = int(line.split("\t")[2])
@@ -49,7 +49,7 @@ with DOCfile as df:
 	offset_count += len(line)
 
 	for line in df:
-		line_chr = line.split("\t")[0]
+		line_chr = line.split("\t")[0].replace("chr", "").upper()
 		line_pos = int(line.split("\t")[1])
 		line_loc = line_chr + ":" + str(line_pos)
 		if chr != line_chr:
