@@ -4,8 +4,8 @@
 # set "root" to be the directory containing this script and the other provided scripts.
 
 # Then, make a new directory, which we will call "mycnvs". Then make the directories mycnvs/erds, mycnvs/cnvn, mycnvs/erds/original, and mycnvs/cnvn/original.
-# Inside the mycnvs/erds/original directory, add files called <myid>.erds.vcf.
-# Inside the mycnvs/cnvn/original directory, add files called <myid>.calls.txt.
+# Inside the mycnvs/erds/original directory, add files called <myid>.erds.vcf. ***Note that this is the VCF file outputted by ERDS.***
+# Inside the mycnvs/cnvn/original directory, add files called <myid>.calls.txt. *** Note that this is the tab-delimited file outputted by CNVnator, not the optional VCF file ***
 # For the same genome, <myid> should be the same. These tell the script which files to merge. Thus, if you have ERDS and CNVnator calls from
 # two different genomes called genome1 and genome2, then mycnvs/erds/original should contain files called genome1.erds.vcf and genome2.erds.vcf,
 # and mycnvs/cnvn/original should contain files called genome1.calls.txt and genome2.calls.txt. Then merging will be done for genome1.erds.vcf and genome1.calls.txt,
